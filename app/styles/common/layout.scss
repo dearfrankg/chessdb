@@ -1,0 +1,48 @@
+
+body {
+  font-family: 'Noto Sans', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background: #1a1a1a;
+  color: #8c8c8c;
+  font-size: 12px;
+}
+
+
+
+.is.color-icon.white::before {
+  content: "K";
+}
+.is.color-icon.black::before {
+  content: "J";
+}
+.is.color-icon.random::before {
+  content: "l";
+}
+
+.dark {
+  .is.color-icon.white::before {
+    content: "J";
+  }
+  .is.color-icon.black::before {
+    content: "K";
+  }
+  .is.color-icon.random::before {
+    content: "l";
+  }
+}
+
+
+.is::before,
+[data-icon]::before,
+.is-after::after {
+  font-size: 1.2em;
+  vertical-align: middle;
+  font-family: "lichess" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: attr(data-icon);
+}
